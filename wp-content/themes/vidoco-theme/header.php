@@ -4,7 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<!--<link rel="icon" href="<?php echo p_acf_o("logo_favicon") ? p_acf_o("logo_favicon") : P_IMG  . '/wp.png' ?>" sizes="16x16" />-->
+	<link rel="icon" href="#" sizes="16x16" />
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php if ( is_singular() && pings_open( get_queried_object())) { ?>
@@ -19,10 +19,9 @@
 	
 	<?php } ?>
 
-	<?php do_action("p_add_code_head") ?>
 	
 </head>
-<body <?php body_class() ?> id="body-top">
+<body >
 <div class="header_bg">
 	<div class="container">
 		<div class="row">
