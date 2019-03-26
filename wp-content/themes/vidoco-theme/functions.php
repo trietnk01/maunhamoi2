@@ -2,6 +2,9 @@
 clearstatcache();
 ob_start();
 require_once trailingslashit( get_template_directory() ) . 'inc/init.php';
+function is_localhost(){
+    return in_array( $_SERVER["SERVER_ADDR"] ,  ['127.0.0.1' , "::1"] ) ;
+}
 if ( is_localhost() ) {
 	show_admin_bar( false );
 }
