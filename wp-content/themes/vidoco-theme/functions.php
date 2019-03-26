@@ -38,6 +38,12 @@ function add_code_ddsmoothmenu(){
 			contentsource: "markup" 
 		});
 	ddsmoothmenu.init({
+			mainmenuid: "smoothmainmenu2", 
+			orientation: "h", 
+			classname: "ddsmoothmenu",
+			contentsource: "markup" 
+		});
+	ddsmoothmenu.init({
 			mainmenuid: "smoothmainmenumobile", 
 			orientation: "h", 
 			classname: "ddsmoothmobile",

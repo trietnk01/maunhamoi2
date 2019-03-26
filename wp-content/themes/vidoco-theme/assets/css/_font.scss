@@ -58,6 +58,10 @@
 	font-family: 'font-times-new-roman' ;
 	src: url( '../fonts/TimesNewRoman/font-times-new-roman.ttf' ) format('truetype');	 
 }
+@font-face {
+	font-family: 'TAHOMA_0' ;
+	src: url( '../fonts/Tahoma/TAHOMA_0.TTF' ) format('truetype');	 
+}
 $f_regular:'Roboto-Regular';
 $f_bold:'Roboto-Bold';
 $f_bold_italic:'Roboto-BoldItalic';
@@ -71,3 +75,4 @@ $f_regular4:'K2D-Regular';
 $f_bold4:'K2D-Bold';
 $f_bold_italic4:'K2D-BoldItalic';
 $f_regular5:"font-times-new-roman";
+$f_regular6:"TAHOMA_0";

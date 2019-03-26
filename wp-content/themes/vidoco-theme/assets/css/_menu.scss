@@ -19,21 +19,21 @@
   >ul{    
     >li{
       >a{
-        font-family:$f_regular;
+        font-family:$f_regular6;
         font-size: 15px;
         text-transform: uppercase;               
         background:transparent;                 
-        padding:35px 10px;         
+        padding:11px 20px;         
         border-right: 0;
         @media(max-width: 1024px){
-          padding: 35px 4px;
+          padding: 10px 13px;
         } 
         &:link,&:visited{
-          color: #000000;
+          color: #ffffff;
         }                     
         &:hover,&.selected{  
-          color: $logo_bg;
-          background:none !important;
+          color: #fff;
+          background:#E84747 !important;
         }         
       }
       &:last-child{
