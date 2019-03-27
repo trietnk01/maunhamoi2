@@ -182,7 +182,14 @@
 								?>								
 							</div>
 						</div>
-						<div class="col-lg-4"></div>
+						<div class="col-lg-4">
+							<?php include get_template_directory()."/block/block-search.php"; ?>
+							<?php include get_template_directory()."/block/block-fanpage.php"; ?>
+							<?php include get_template_directory()."/block/block-video.php"; ?>
+							<?php include get_template_directory()."/block/block-mau-thiet-ke-moi.php"; ?>
+							<?php include get_template_directory()."/block/block-mau-thiet-ke-noi-bat.php"; ?>
+							<?php include get_template_directory()."/block/block-mau-thiet-ke-pho-bien.php"; ?>
+						</div>
 					</div>
 				</div>
 			</div>

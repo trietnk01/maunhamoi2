@@ -9,6 +9,8 @@
 	<?php wp_head(); ?>	
 </head>
 <body >
+	<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1994326743991661&autoLogAppEvents=1"></script>
 	<div class="container">
 		<div class="row">
 			<div class="col">

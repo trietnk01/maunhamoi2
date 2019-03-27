@@ -193,8 +193,8 @@
 					color: #ffffff;
 					padding-top:5px;
 					padding-bottom:5px;
-					padding-left:5px;
-					padding-right:5px;
+					padding-left:10px;
+					padding-right:10px;
 					&:hover{
 						background:#333333;
 					}
@@ -219,6 +219,9 @@
 		@media(max-width: 1024px){
 			width: 150px;
 		}
+		@media(max-width: 375px){
+			width: 100%;
+		}
 		.ranet{
 			text-align: center;
 			margin-top: 30px;
@@ -241,6 +244,9 @@
 		}
 		@media(max-width: 576px){
 			width: 150px;
+		}
+		@media(max-width: 375px){
+			width: 100%;
 		}
 		.y-kien{
 			line-height: 20px;
@@ -271,7 +277,12 @@
 	.bao-gia{
 		margin-bottom: 15px;
 		&:first-child{
-			margin-top: 30px;
+			@media(max-width: 740px){
+				margin-top: 30px;
+			}			
+		}
+		@media(max-width: 320px){
+			margin-bottom: 30px;
 		}
 		.bao-gia-left{
 			float: left;
@@ -284,6 +295,9 @@
 			}
 			@media(max-width: 576px){
 				width: 100px;
+			}
+			@media(max-width: 320px){
+				width: 100%;
 			}
 		}
 		.bao-gia-right{
@@ -299,8 +313,18 @@
 			@media(max-width: 576px){
 				width: 210px;
 			}
+			@media(max-width: 375px){
+				width: 170px;
+			}
+			@media(max-width: 360px){
+				width: 160px;
+			}
+			@media(max-width: 320px){
+				width: 100%;
+				margin-left: 0;
+			}
 			.nam-nay{
-				line-height: 15px;
+				line-height: 15px;						
 				a{
 					color: $mau;
 					font-size: 13px;
@@ -316,6 +340,9 @@
 	}
 	.mau-nha{
 		margin-bottom: 30px;
+		@media(max-width: 320px){
+			margin-bottom: 50px;
+		}
 		.mau-nha-left{
 			float: left;
 			width: 100px;
@@ -324,6 +351,9 @@
 			}
 			@media(max-width: 740px){
 				width: 100px;
+			}
+			@media(max-width: 320px){
+				width: 100%;
 			}
 		}
 		.mau-nha-right{
@@ -338,6 +368,16 @@
 			}
 			@media(max-width: 576px){
 				width: 210px;
+			}
+			@media(max-width: 375px){
+				width: 170px;
+			}
+			@media(max-width: 360px){
+				width: 160px;
+			}
+			@media(max-width: 320px){
+				width: 100%;
+				margin-left: 0;
 			}
 			.mau-nha-right-title{
 				line-height: 15px;
@@ -367,6 +407,76 @@
 					}
 				}
 			}
+		}
+	}
+	.total-right{
+		.h-total-right{
+			background-color:$mau;
+			.h-total-right-tieu-de{
+				float: left;
+				background: #E84747;
+				padding: 5px 25px;
+				color: #fff;
+				font-size: 20px;
+			}
+		}
+		.frm-search-article{
+			.frm-search-left{
+				float: left;
+				.input-box{
+					border: 1px solid #ddd;
+					width: 270px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					outline: 0;
+					padding-left:5px;
+				}
+			}
+			.frm-search-right{
+				float: left;
+				a{
+					display:inline-block;
+					background-color:$mau_1;
+					color: #ffffff;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					padding-left: 15px;
+					padding-right: 15px;
+					font-size: 15px;
+				}
+			}			
+		}
+	}
+	.maradies{
+		margin-top:70px;
+	}
+	.videos-block{
+		margin-top: 35px;
+	}
+	.mau-thiet-ke-block{
+		margin-top: 35px;
+		.bo-mau-thiet-ke{
+			.roda-mau-thiet-ke{
+				margin-bottom: 20px;
+				.mau-thiet-ke-left{
+					float: left;
+					width: 100px;
+				}
+				.mau-thiet-ke-right{
+					float: left;
+					width: 220px;
+					margin-left: 10px;
+					line-height: 16px;
+					a{
+						color: $mau;
+						font-size: 15px;
+						font-weight: bold;
+						&:hover{
+							color: $mau_1;
+						}
+					}
+				}
+			}			
 		}
 	}
 }
