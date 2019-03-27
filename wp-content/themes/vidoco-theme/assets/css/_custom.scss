@@ -215,7 +215,10 @@
 	}	
 	.f-category-left{
 		width: 200px;
-		float: left;
+		float: left;		
+		@media(max-width: 1024px){
+			width: 150px;
+		}
 		.ranet{
 			text-align: center;
 			margin-top: 30px;
@@ -233,6 +236,12 @@
 		float: left;
 		width: 235px;
 		margin-left: 10px;
+		@media(max-width: 1024px){
+			width: 200px;
+		}
+		@media(max-width: 576px){
+			width: 150px;
+		}
 		.y-kien{
 			line-height: 20px;
 			a{
@@ -261,21 +270,100 @@
 	}	
 	.bao-gia{
 		margin-bottom: 15px;
+		&:first-child{
+			margin-top: 30px;
+		}
 		.bao-gia-left{
 			float: left;
 			width: 85px;
+			@media(max-width: 1024px){
+				width: 75px;
+			}
+			@media(max-width: 740px){
+				width: 150px;
+			}
+			@media(max-width: 576px){
+				width: 100px;
+			}
 		}
 		.bao-gia-right{
 			float: left;
 			width: 100px;
 			margin-left: 10px;
+			@media(max-width: 1024px){
+				width:75px;
+			}
+			@media(max-width: 740px){
+				width:285px;
+			}
+			@media(max-width: 576px){
+				width: 210px;
+			}
 			.nam-nay{
 				line-height: 15px;
 				a{
 					color: $mau;
 					font-size: 13px;
+					@media(max-width: 740px){
+						font-size: 15px;
+					}
 					&:hover{
 						color: $mau_1;
+					}
+				}
+			}
+		}
+	}
+	.mau-nha{
+		margin-bottom: 30px;
+		.mau-nha-left{
+			float: left;
+			width: 100px;
+			@media(max-width: 1024px){
+				width: 80px;
+			}
+			@media(max-width: 740px){
+				width: 100px;
+			}
+		}
+		.mau-nha-right{
+			float: left;
+			width: 210px;
+			margin-left: 10px;
+			@media(max-width: 1024px){
+				width: 165px;
+			}
+			@media(max-width: 740px){
+				width: 340px;
+			}
+			@media(max-width: 576px){
+				width: 210px;
+			}
+			.mau-nha-right-title{
+				line-height: 15px;
+				a{
+					color: $mau;
+					font-size: 14px;
+					&:hover{
+						color: $mau_1;
+					}
+				}
+			}
+			.readmore{
+				margin-top: 5px;
+				@media(max-width: 740px){
+					margin-top: 15px;
+				}
+				a{
+					display: inline-block;
+					background-color:$mau_1;
+					color: #ffffff;
+					padding-top:5px;
+					padding-bottom:5px;
+					padding-left:10px;
+					padding-right:10px;
+					&:hover{
+						background-color:$mau;						
 					}
 				}
 			}
