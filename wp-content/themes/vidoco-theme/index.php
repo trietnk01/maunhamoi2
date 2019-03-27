@@ -16,7 +16,7 @@
 								for ($i=0;$i<10;$i++) {
 									?>
 									<div class="item">
-										<div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/biet-thu-1.jpg" ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (775/415))">				
+										<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/biet-thu-1.jpg" ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (775/415))">				
 										</div>		
 										<hr class="banner-line">	
 										<div class="banner-title-excerption">
@@ -45,7 +45,7 @@
 											<div>
 												<a href="javascript:void(0);">
 													<figure>
-														<div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/phoi-nha-phoi-canh.jpg" ; ?>');background-repeat:no-repeat;background-size: cover;padding-top: calc(100% / (500/500));"></div>	
+														<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/phoi-nha-phoi-canh.jpg" ; ?>');background-repeat:no-repeat;background-size: cover;padding-top: calc(100% / (500/500));"></div>	
 													</figure>
 												</a>												
 											</div>
@@ -72,7 +72,7 @@
 											<div>
 												<a href="javascript:void(0);">
 													<figure>
-														<div style="background-image: url('<?php echo get_template_directory_uri()."/assets/images/phoi-canh-1.jpg" ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (200/200));"></div>	
+														<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/phoi-canh-1.jpg" ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (200/200));"></div>	
 													</figure>
 												</a>
 											</div>											

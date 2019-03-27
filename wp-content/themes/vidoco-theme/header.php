@@ -14,7 +14,9 @@
 			<div class="col">
 				<div class="bg-white-general">
 					<div class="banner-header">
-						<img src="<?php echo get_template_directory_uri()."/assets/images/banner.jpg"; ?>">
+						<a href="<?php echo home_url( '',null ); ?>">
+							<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/logo-banner.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (979/159));"></div>			
+						</a>								
 					</div>
 					<div class="bg-header">
 						<div id="smoothmainmenu" class="ddsmoothmenu">
