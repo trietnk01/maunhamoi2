@@ -4,9 +4,10 @@ jQuery(document).ready(function(){
         loop:true,
         margin:0,                        
         nav:true,
+        navText: ["<i class=\"fas fa-chevron-left\"></i>","<i class=\"fas fa-chevron-right\"></i>"],
         dots:false,            
-        mouseDrag: false,
-        touchDrag: false,  
+        mouseDrag: true,
+        touchDrag: true,  
         lazyLoad: true,                              
         responsiveClass:true,
         responsive:{
