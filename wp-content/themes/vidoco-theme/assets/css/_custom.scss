@@ -529,4 +529,36 @@
 			}			
 		}
 	}
+	.y-kien-kh-block{
+		.y-kien-khach-hang-box{
+			padding-top:10px;
+			.y-kien-kh-item{	
+				margin-bottom: 10px;	
+				border-bottom:1px solid $mau;
+				padding-bottom: 10px;	
+				&:last-child{
+					border-bottom:0;
+				}	
+				.y-kien-kh-item-left{
+					float: left;
+					width: 100px;
+				}
+				.y-kien-kh-item-right{
+					float: left;
+					width: 220px;
+					margin-left: 10px;
+					.ten-khach-hang{
+						font-size: 14px;
+						font-weight: bold;
+					}
+					.thang-mua{
+						margin-top: 10px;
+					}
+					.comment-khach-hang{
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
 }

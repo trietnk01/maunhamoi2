@@ -189,6 +189,7 @@
 							<?php include get_template_directory()."/block/block-mau-thiet-ke-moi.php"; ?>
 							<?php include get_template_directory()."/block/block-mau-thiet-ke-noi-bat.php"; ?>
 							<?php include get_template_directory()."/block/block-mau-thiet-ke-pho-bien.php"; ?>
+							<?php include get_template_directory()."/block/block-y-kien-khach-hang.php"; ?>
 						</div>
 					</div>
 				</div>
