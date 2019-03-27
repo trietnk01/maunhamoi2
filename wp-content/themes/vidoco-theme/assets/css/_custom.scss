@@ -485,7 +485,10 @@
 				margin-bottom: 20px;
 				.mau-thiet-ke-left{
 					float: left;
-					width: 100px;					
+					width: 100px;
+					@media(max-width: 320px){
+						width: 100%;
+					}					
 				}
 				.mau-thiet-ke-right{
 					float: left;
@@ -500,6 +503,19 @@
 					}
 					@media(max-width: 740px){
 						width: 340px;
+					}
+					@media(max-width: 576px){
+						width: 210px;
+					}
+					@media(max-width: 375px){
+						width: 170px;
+					}
+					@media(max-width: 360px){
+						width: 160px;
+					}
+					@media(max-width: 320px){
+						width: 100%;
+						margin-left: 0;
 					}
 					a{
 						color: $mau;
