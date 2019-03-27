@@ -423,9 +423,34 @@
 		.frm-search-article{
 			.frm-search-left{
 				float: left;
+				width: 83%;
+				@media(max-width: 1024px){
+					width: 75%;
+				}
+				@media(max-width: 992px){
+					width: 90%;
+				}
+				@media(max-width: 740px){
+					width: 87%;
+				}
+				@media(max-width: 576px){
+					width: 83%;
+				}
+				@media(max-width: 375px){
+					width: 80%;
+				}
+				@media(max-width: 360px){
+					width: 78%;
+				}
+				@media(max-width: 320px){
+					width: 76%;
+				}
+				@media(max-width: 240px){
+					width: 63%;
+				}				
 				.input-box{
 					border: 1px solid #ddd;
-					width: 270px;
+					width:100%;
 					padding-top: 5px;
 					padding-bottom: 5px;
 					outline: 0;
@@ -460,13 +485,22 @@
 				margin-bottom: 20px;
 				.mau-thiet-ke-left{
 					float: left;
-					width: 100px;
+					width: 100px;					
 				}
 				.mau-thiet-ke-right{
 					float: left;
 					width: 220px;
 					margin-left: 10px;
 					line-height: 16px;
+					@media(max-width: 1024px){
+						width:150px; 
+					}
+					@media(max-width: 992px){
+						width: 520px;
+					}
+					@media(max-width: 740px){
+						width: 340px;
+					}
 					a{
 						color: $mau;
 						font-size: 15px;
