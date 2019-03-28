@@ -278,43 +278,22 @@
 		}
 		.bao-gia-left{
 			float: left;
-			width: 85px;
-			@media(max-width: 1024px){
-				width: 75px;
-			}
-			@media(max-width: 740px){
-				width: 150px;
-			}
-			@media(max-width: 576px){
-				width: 100px;
-			}
-			@media(max-width: 320px){
+			width: 30%;	
+			@media(max-width: 240px){
 				width: 100%;
-			}
+			}		
 		}
 		.bao-gia-right{
 			float: left;
-			width: 100px;
-			margin-left: 10px;
-			@media(max-width: 1024px){
-				width:75px;
-			}
+			width: 60%;			
+			margin-left: 10px;	
 			@media(max-width: 740px){
-				width:285px;
-			}
-			@media(max-width: 576px){
-				width: 210px;
-			}
-			@media(max-width: 375px){
-				width: 170px;
-			}
-			@media(max-width: 360px){
-				width: 160px;
-			}
-			@media(max-width: 320px){
+				width: 65%;
+			}		
+			@media(max-width: 240px){
 				width: 100%;
 				margin-left: 0;
-			}
+			}		
 			.nam-nay{
 				line-height: 15px;						
 				a{
@@ -337,40 +316,19 @@
 		}
 		.mau-nha-left{
 			float: left;
-			width: 100px;
-			@media(max-width: 1024px){
-				width: 80px;
-			}
-			@media(max-width: 740px){
-				width: 100px;
-			}
-			@media(max-width: 320px){
+			width: 30%;	
+			@media(max-width: 240px){
 				width: 100%;
-			}
+			}		
 		}
 		.mau-nha-right{
-			float: left;
-			width: 210px;
+			float: left;			
 			margin-left: 10px;
-			@media(max-width: 1024px){
-				width: 165px;
-			}
-			@media(max-width: 740px){
-				width: 340px;
-			}
-			@media(max-width: 576px){
-				width: 210px;
-			}
-			@media(max-width: 375px){
-				width: 170px;
-			}
-			@media(max-width: 360px){
-				width: 160px;
-			}
-			@media(max-width: 320px){
+			width: 65%;	
+			@media(max-width: 240px){
 				width: 100%;
 				margin-left: 0;
-			}
+			}		
 			.mau-nha-right-title{
 				line-height: 15px;
 				a{
@@ -477,38 +435,20 @@
 				margin-bottom: 20px;
 				.mau-thiet-ke-left{
 					float: left;
-					width: 100px;
-					@media(max-width: 320px){
+					width: 30%;	
+					@media(max-width: 240px){
 						width: 100%;
-					}					
+					}				
 				}
 				.mau-thiet-ke-right{
 					float: left;
-					width: 220px;
+					width: 65%;
 					margin-left: 10px;
-					line-height: 16px;
-					@media(max-width: 1024px){
-						width:150px; 
-					}
-					@media(max-width: 992px){
-						width: 520px;
-					}
-					@media(max-width: 740px){
-						width: 340px;
-					}
-					@media(max-width: 576px){
-						width: 210px;
-					}
-					@media(max-width: 375px){
-						width: 170px;
-					}
-					@media(max-width: 360px){
-						width: 160px;
-					}
-					@media(max-width: 320px){
+					line-height: 16px;	
+					@media(max-width: 240px){
 						width: 100%;
 						margin-left: 0;
-					}
+					}				
 					a{
 						color: $mau;
 						font-size: 15px;
