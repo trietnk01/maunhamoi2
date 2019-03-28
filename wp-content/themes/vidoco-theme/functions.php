@@ -17,7 +17,7 @@ function myplugin_ajaxurl() {
          </script>';
 }
 // end add ajaxurl
-// start datetime
+// start datetime converter
 function datetimeConverter($date,$format_to){
 	$result="";
 	$arrDate    = date_parse_from_format('Y-m-d H:i:s', $date) ;
@@ -25,7 +25,7 @@ function datetimeConverter($date,$format_to){
 	$result     = date($format_to, $ts);
 	return $result;
 }
-// end datetime
+// end datetime converter
 // start ddsmoothmenu
 add_action('wp_head', 'add_code_ddsmoothmenu');
 function add_code_ddsmoothmenu(){			
@@ -36,13 +36,7 @@ function add_code_ddsmoothmenu(){
 			orientation: "h", 
 			classname: "ddsmoothmenu",
 			contentsource: "markup" 
-		});
-	ddsmoothmenu.init({
-			mainmenuid: "smoothmainmenu2", 
-			orientation: "h", 
-			classname: "ddsmoothmenu",
-			contentsource: "markup" 
-		});
+		});	
 	ddsmoothmenu.init({
 			mainmenuid: "smoothmainmenumobile", 
 			orientation: "h", 

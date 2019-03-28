@@ -240,7 +240,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
+					<?php include get_template_directory()."/block/block-google-map.php"; ?>
+				</div>				
 			</div>
 		</div>
 	</div>
