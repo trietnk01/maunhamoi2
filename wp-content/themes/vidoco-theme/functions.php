@@ -9,6 +9,7 @@ if ( is_localhost() ) {
 	show_admin_bar( false );
 }
 ob_get_clean();
+add_theme_support( 'post-thumbnails' );
 // start ajaxurl 
 add_action('wp_head', 'myplugin_ajaxurl');
 function myplugin_ajaxurl() {
