@@ -52,17 +52,7 @@
 								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 									<span class="navbar-toggler-icon"></span>
 								</button>
-								<div class="collapse navbar-collapse" id="navbarSupportedContent">
-									<!--<ul class="mobile-menu">
-										<li><a href="javascript:void(0);">Trang chủ</a></li>
-										<li><a href="javascript:void(0);">Giới thiệu</a></li>
-										<li><a href="javascript:void(0);">Biệt thự đẹp</a></li>
-										<li><a href="javascript:void(0);">Nhà phố đẹp</a></li>
-										<li><a href="javascript:void(0);">Nhà cấp 4</a></li>
-										<li><a href="javascript:void(0);">Nội thất</a></li>
-										<li><a href="javascript:void(0);">Dự án đã thực hiện</a></li>
-										<li><a href="javascript:void(0);">Liên hệ</a></li>
-									</ul>-->
+								<div class="collapse navbar-collapse" id="navbarSupportedContent">									
 									<?php			
 									$args = array( 
 										'menu'              => '', 

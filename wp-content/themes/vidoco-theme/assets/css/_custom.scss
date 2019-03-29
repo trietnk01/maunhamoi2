@@ -552,6 +552,132 @@
 			}
 		}
 	}
+	.header-page{
+		font-size: 25px;
+	}
+	.than-bai-viet{
+		margin-top: 20px;
+		text-align: justify;
+	}
+	.category-header{
+		background-color:$mau;
+		color: #ffffff;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.category-product-block{
+		padding-top:20px;
+		.product-item-box{
+			margin-bottom: 40px;
+			.product-item-box-title{
+				background-color:$mau_1;
+				padding-top:5px;
+				padding-bottom:5px;
+				padding-left:5px;
+				padding-right:5px;
+				line-height: 16px;
+				a{
+					color: #ffffff;
+					font-size: 14px;
+					font-weight: bold;
+					text-transform: uppercase;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+			.product-item-box-image{
+				margin-top: 10px;
+			}
+			.product-item-box-title-2{
+				line-height: 15px;
+				a{
+					color: $mau;
+					font-size: 15px;
+					&:hover{
+						color: $mau_1;
+					}
+				}
+			}
+			.xem-chi-tiet{
+				text-align: right;
+				a{
+					background-color:$mau_1;
+					color: #ffffff;
+					display: inline-block;
+					padding-top:5px;
+					padding-bottom:5px;
+					padding-left:5px;
+					padding-right:5px;
+					&:hover{
+						background-color:$mau;
+					}
+				}
+			}
+		}
+	}
+	.contact-body{
+		.frm-contact{
+			margin-top: 30px;
+			.ck-contact{
+				margin-top: 5px;
+				input{
+					border:1px solid #cacaca;
+					border-radius:0;
+					outline: 0;
+				}
+				textarea{
+					border:1px solid #cacaca;
+					border-radius:0;
+					outline: 0;
+				}
+			}
+			.ck-submit{
+				margin-top: 10px;
+				a{
+					display: block;
+					float: left;
+					background-color:$mau_1;
+					color: #ffffff;
+					padding-top: 3px;
+					padding-bottom: 3px;
+					padding-left: 15px;
+					padding-right: 15px;
+					font-size: 20px;
+					&:hover{
+						background-color:$mau;						
+					}
+				}
+			}			
+		}
+		.thong-tin-box{
+			margin-top: 25px;
+			.thong-tin-lien-he{
+				margin-bottom: 30px;
+				.lien-he-1{
+					margin-top: 5px;
+					color: $mau_1;
+					font-size: 20px;
+				}
+				.lien-he-2{
+					margin-top: 5px;
+					line-height: 10px;
+					a{
+						font-size: 14px;
+					}
+				}
+				.lien-he-3{
+					font-size: 14px;
+					margin-top: 5px;
+				}
+			}
+		}		
+	}
 }
 .talet{
 	background-color:#333333;
