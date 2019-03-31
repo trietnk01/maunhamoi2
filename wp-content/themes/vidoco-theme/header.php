@@ -4,7 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="icon" href="<?php echo get_field("op_p_logo_favicon","option"); ?>"/>
+	<link rel="icon" href="<?php echo get_field("setting_logo_favicon","option"); ?>"/>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php wp_head(); ?>	
 </head>
@@ -17,7 +17,7 @@
 				<div class="bg-white-general">
 					<div class="banner-header">
 						<a href="<?php echo home_url( '',null ); ?>">
-							<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/logo-banner.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (979/159));"></div>			
+							<div style="background-image: url('<?php echo get_field("setting_banner_header","option"); ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (979/159));"></div>			
 						</a>								
 					</div>
 					<div class="bg-header">
@@ -78,21 +78,30 @@
 								</div>
 							</nav>
 						</div> 
-					</div>					
-					<ul class="bg-related-product">
-						<li><a href="javascript:void(0);">Phòng khách đẹp</a></li>
-						<li><a href="javascript:void(0);">Phòng ngủ đẹp</a></li>
-						<li><a href="javascript:void(0);">Phòng bếp - Ăn</a></li>
-						<li><a href="javascript:void(0);">Sân vườn tiểu cảnh</a></li>
-						<li><a href="javascript:void(0);">Nhà xưởng</a></li>
-						<li><a href="javascript:void(0);">Công trình công cộng</a></li>
-						<li><a href="javascript:void(0);">Báo giá</a></li>
-						<li><a href="javascript:void(0);">Tư vấn giám sát</a></li>
-						<li><a href="javascript:void(0);">Tuyển dụng</a></li>
-					</ul>	
-					<div class="breadcrumb-bg">
-						<span><a href="javascript:void(0);">Mẫu nhà mới</a></span>
-					</div>			
+					</div>		
+					<?php			
+					$args = array( 
+						'menu'              => '', 
+						'container'         => '', 
+						'container_class'   => '', 
+						'container_id'      => '', 
+						'menu_class'        => 'bg-related-product',                             
+						'echo'              => true, 
+						'fallback_cb'       => 'wp_page_menu', 
+						'before'            => '', 
+						'after'             => '', 
+						'link_before'       => '', 
+						'link_after'        => '', 
+						'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+						'depth'             => 3, 
+						'walker'            => '', 
+						'theme_location'    => 'related_product_menu' ,
+						'menu_li_actived'       => 'current-menu-item',
+						'menu_item_has_children'=> 'menu-item-has-children',
+					);
+					wp_nav_menu($args);
+					do_action('p_after_header');
+					?>        														
 				</div>				
 			</div>			
 		</div>
