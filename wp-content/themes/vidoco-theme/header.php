@@ -99,8 +99,10 @@
 						'menu_li_actived'       => 'current-menu-item',
 						'menu_item_has_children'=> 'menu-item-has-children',
 					);
-					wp_nav_menu($args);
-					do_action('p_after_header');
+					wp_nav_menu($args);					
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<div class="main-breadcrumb">','</div>');
+					}
 					?>        														
 				</div>				
 			</div>			

@@ -11,23 +11,51 @@
 				<div class="body-bg">
 					<div class="row">
 						<div class="col-lg-8">
-							<div class="owl-carousel-banner owl-carousel owl-theme owl-loaded">	
-								<?php 
-								for ($i=0;$i<10;$i++) {
+							<?php 
+							$za_category_selected=get_field("home_page_za_category","option");											
+							$args = array(
+								'post_type' => 'zaproduct',  
+								'orderby' => 'id',
+								'order'   => 'DESC',    
+								'posts_per_page' => 10,
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'za_category',
+										'field'    => 'id',
+										'terms'    => $za_category_selected,                                  
+									),
+								),
+							); 
+							$the_query=new WP_Query($args); 
+							if($the_query->have_posts()){
+								?>
+								<div class="owl-carousel-banner owl-carousel owl-theme owl-loaded">
+									<?php 
+									while ($the_query->have_posts()) {
+										$the_query->the_post();
+										$post_id=$the_query->post->ID;                                                       
+										$permalink=get_the_permalink(@$post_id);					
+										$title=get_the_title(@$post_id);					
+										$excerpt=get_the_excerpt(@$post_id);		
+										$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');											
+										?>
+										<div class="item">
+											<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (775/445))">				
+											</div>		
+											<hr class="banner-line">	
+											<div class="banner-title-excerption">
+												<div class="banner-title"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></div>
+												<div class="banner-excerption"><?php echo @$excerpt; ?></div>
+											</div>
+										</div>								
+										<?php												
+									}	
+									wp_reset_postdata();						
 									?>
-									<div class="item">
-										<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/biet-thu-1.jpg" ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (775/415))">				
-										</div>		
-										<hr class="banner-line">	
-										<div class="banner-title-excerption">
-											<div class="banner-title"><a href="javascript:void(0);">Ngôi nhà biệt thự 3 tầng đẹp, độc, sang giữa thành phố Sài gòn.</a></div>
-											<div class="banner-excerption">Sở hữu ngôi nhà biệt thự 3 tầng đẹp, độc, sang giữa thành phố Sài gòn. Để chính thức sở hữu cho mình một ngôi</div>
-										</div>
-									</div>								
-									<?php									
-								}
-								?>								
-							</div>
+								</div>
+								<?php																									
+							}
+							?>							
 							<div class="circle-wrapper">
 								<?php
 								$k=0; 
@@ -45,7 +73,7 @@
 											<div>
 												<a href="javascript:void(0);">
 													<figure>
-														<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/phoi-nha-phoi-canh.jpg" ; ?>');background-repeat:no-repeat;background-size: cover;padding-top: calc(100% / (500/500));"></div>	
+														<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/phoi-nha-phoi-canh.jpg" ; ?>');background-repeat:no-repeat;background-size: cover;padding-top: calc(100% / (800/600));"></div>	
 													</figure>
 												</a>												
 											</div>
