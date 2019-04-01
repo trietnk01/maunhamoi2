@@ -212,27 +212,27 @@
 												$title=get_the_title(@$post_id);					
 												$excerpt=get_the_excerpt(@$post_id);		
 												$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');	
+												?>
+												<div class="col-md-6">
+													<div class="mau-nha">
+														<div class="mau-nha-left">
+															<a href="<?php echo @$permalink; ?>">
+																<figure>
+																	<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>	
+																</figure>
+															</a>
+														</div>
+														<div class="mau-nha-right">
+															<h3 class="mau-nha-right-title"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h3>
+															<div class="readmore"><a href="<?php echo @$permalink; ?>">Xem chi tiết</a></div>
+														</div>
+														<div class="clr"></div>
+													</div>
+												</div>
+												<?php
 											}
 											wp_reset_postdata();
-										}
-										?>
-										<div class="col-md-6">
-											<div class="mau-nha">
-												<div class="mau-nha-left">
-													<a href="<?php echo @$permalink; ?>">
-														<figure>
-															<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>	
-														</figure>
-													</a>
-												</div>
-												<div class="mau-nha-right">
-													<h3 class="mau-nha-right-title"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h3>
-													<div class="readmore"><a href="<?php echo @$permalink; ?>">Xem chi tiết</a></div>
-												</div>
-												<div class="clr"></div>
-											</div>
-										</div>
-										<?php
+										}										
 										$k++;
 										if($k%2 == 0 || $k == 4){
 											echo '</div>';
@@ -242,83 +242,16 @@
 								</div>
 								<?php
 							}
-							?>
-							<!--<h2 class="tham-gia-thiet-ke margin-top-30">Tham gia thiết kế</h2>
-							<div class="margin-top-5">
-								<?php 
-								$k=0;
-								for ($i=1; $i <= 4; $i++) { 
-									if($k%2==0){
-										echo '<div class="row">';
-									}
-									?>
-									<div class="col-md-6">
-										<div class="mau-nha">
-											<div class="mau-nha-left">
-												<a href="javascript:void(0);">
-													<figure>
-														<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/bang-bao-gia-phan-tho.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>	
-													</figure>
-												</a>
-											</div>
-											<div class="mau-nha-right">
-												<h3 class="mau-nha-right-title"><a href="javascript:void(0);">Kinh ngạc mẫu thiết kế nhà phố 3 tầng kích thước 4x14m thiết kế với</a></h3>
-												<div class="readmore"><a href="javascript:void(0);">Xem chi tiết</a></div>
-											</div>
-											<div class="clr"></div>
-										</div>
-									</div>
-									<?php
-									$k++;
-									if($k%2 == 0 || $k == 4){
-										echo '</div>';
-									}
-								}
-								?>								
-							</div>
-							<h2 class="tham-gia-thiet-ke margin-top-30">Mẫu nhà mới</h2>
-							<div class="margin-top-5">
-								<?php 
-								$k=0;
-								for ($i=1; $i <= 4; $i++) { 
-									if($k%2==0){
-										echo '<div class="row">';
-									}
-									?>
-									<div class="col-md-6">
-										<div class="mau-nha">
-											<div class="mau-nha-left">
-												<a href="javascript:void(0);">
-													<figure>
-														<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/bang-bao-gia-phan-tho.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>	
-													</figure>
-												</a>
-											</div>
-											<div class="mau-nha-right">
-												<h3 class="mau-nha-right-title"><a href="javascript:void(0);">Kinh ngạc mẫu thiết kế nhà phố 3 tầng kích thước 4x14m thiết kế với</a></h3>
-												<div class="readmore"><a href="javascript:void(0);">Xem chi tiết</a></div>
-											</div>
-											<div class="clr"></div>
-										</div>
-									</div>
-									<?php
-									$k++;
-									if($k%2 == 0 || $k == 4){
-										echo '</div>';
-									}
-								}
-								?>								
-							</div>-->
+							?>							
 						</div>
 						<div class="col-lg-4">
 							<?php include get_template_directory()."/block/block-search.php"; ?>
 							<?php include get_template_directory()."/block/block-fanpage.php"; ?>
 							<?php include get_template_directory()."/block/block-video.php"; ?>
-							<?php include get_template_directory()."/block/block-mau-thiet-ke-moi.php"; ?>
-							<?php include get_template_directory()."/block/block-mau-thiet-ke-noi-bat.php"; ?>
-							<?php include get_template_directory()."/block/block-mau-thiet-ke-pho-bien.php"; ?>
+							<?php include get_template_directory()."/block/block-mau-thiet-ke.php"; ?>														
 							<?php include get_template_directory()."/block/block-y-kien-khach-hang.php"; ?>
 							<?php include get_template_directory()."/block/block-ban-quan-tam.php"; ?>
+							<?php include get_template_directory()."/block/block-visitor-counter.php"; ?>
 						</div>
 					</div>
 					<?php include get_template_directory()."/block/block-menu-content-bottom.php"; ?>
