@@ -35,15 +35,15 @@ get_header();
 									<div class="thong-tin-box">
 										<div class="thong-tin-lien-he">
 											<div class="lien-he-1">Địa chỉ liên hệ</div>
-											<h2 class="lien-he-3">130 (21A3) Đường Số 06, KDC Phú Hữu, P. Phú Hữu, Q.9, TP.HCM</h2>
+											<h2 class="lien-he-3"><?php echo get_field("setting_address","option"); ?></h2>
 										</div>
 										<div class="thong-tin-lien-he">
 											<div class="lien-he-1">Hotline tư vấn</div>
-											<h2 class="lien-he-2"><a href="tel:0988162753">0932 055 188</a></h2>
+											<h2 class="lien-he-2"><a href="tel:<?php echo get_field("setting_call_now","option"); ?>"><?php echo get_field("setting_hotline","option"); ?></a></h2>
 										</div>
 										<div class="thong-tin-lien-he">
 											<div class="lien-he-1">Email</div>
-											<h2 class="lien-he-2"><a href="mailto:vinadasa040216@gmail.com">vinadasa040216@gmail.com</a></h2>
+											<h2 class="lien-he-2"><a href="mailto:<?php echo get_field("setting_email","option"); ?>"><?php echo get_field("setting_email","option"); ?></a></h2>
 										</div>
 									</div>									
 								</div>
@@ -54,11 +54,10 @@ get_header();
 						<?php include get_template_directory()."/block/block-search.php"; ?>
 						<?php include get_template_directory()."/block/block-fanpage.php"; ?>
 						<?php include get_template_directory()."/block/block-video.php"; ?>
-						<?php include get_template_directory()."/block/block-mau-thiet-ke-moi.php"; ?>
-						<?php include get_template_directory()."/block/block-mau-thiet-ke-noi-bat.php"; ?>
-						<?php include get_template_directory()."/block/block-mau-thiet-ke-pho-bien.php"; ?>
+						<?php include get_template_directory()."/block/block-mau-thiet-ke.php"; ?>														
 						<?php include get_template_directory()."/block/block-y-kien-khach-hang.php"; ?>
 						<?php include get_template_directory()."/block/block-ban-quan-tam.php"; ?>
+						<?php include get_template_directory()."/block/block-visitor-counter.php"; ?>
 					</div>
 				</div>
 				<?php include get_template_directory()."/block/block-menu-content-bottom.php"; ?>

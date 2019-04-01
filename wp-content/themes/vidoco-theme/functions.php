@@ -60,35 +60,35 @@ function portfolio_page_template( $template ) {
 		$slug=$term->slug;
 	}	
 	if(get_query_var('za_category') != ''){
-		$file = get_template_directory() . '/template-05-product.php';
-		if(file_exists($file)){
-			return $file;
-		}			
-	}
-	if(get_query_var('za_trade') != ''){
-		$file = get_template_directory() . '/template-05-product.php';
-		if(file_exists($file)){
-			return $file;
-		}			
-	}
-	if(get_query_var('za_vungmien') != ''){
-		$file = get_template_directory() . '/template-05-product.php';
+		$file = get_template_directory() . '/template-za-category.php';
 		if(file_exists($file)){
 			return $file;
 		}			
 	}	
 	if(get_query_var('zaproduct') != ''){
-		$file = get_template_directory() . '/template-09-product-detail.php';
+		$file = get_template_directory() . '/template-product-detail.php';
 		if(file_exists($file)){
 			return $file;
 		}			
-	}	
-	if(strcmp($slug, 'diem-kinh-doanh') == 0 || strcmp($slug, 'tram-dung-chan') == 0){
-		$file = get_template_directory() . '/template-06-business-position.php';
-		if(file_exists($file)){
-			return $file;
-		}
 	}		
 	return $template;
 }
 /* end template include */
+/* begin str_slug */
+function str_slug( $filename ) {
+    $sanitized_filename = remove_accents( $filename ); // Convert to ASCII
+    // Standard replacements
+    $invalid = array(
+        ' '   => '-',
+        '%20' => '-',
+        '_'   => '-',
+    );
+    $sanitized_filename = str_replace( array_keys( $invalid ), array_values( $invalid ), $sanitized_filename );
+    $sanitized_filename = preg_replace('/[^A-Za-z0-9-\. ]/', '', $sanitized_filename); // Remove all non-alphanumeric except .
+    $sanitized_filename = preg_replace('/\.(?=.*\.)/', '', $sanitized_filename); // Remove all but last .
+    $sanitized_filename = preg_replace('/-+/', '-', $sanitized_filename); // Replace any more than one - in a row
+    $sanitized_filename = str_replace('-.', '.', $sanitized_filename); // Remove last - if at the end
+    $sanitized_filename = strtolower( $sanitized_filename ); // Lowercase
+    return $sanitized_filename;
+}
+/* end str_slug */
