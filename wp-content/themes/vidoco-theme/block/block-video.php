@@ -4,6 +4,9 @@
 		<div class="clr"></div>
 	</div>
 	<div class="margin-top-5">
-		<iframe width="100%" height="315" src="https://www.youtube.com/embed/ztO088Z--is" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<?php 
+		$setting_video_iframe=get_field("setting_video_iframe","option");
+		echo @$setting_video_iframe;
+		?>		
 	</div>
 </div>
