@@ -7,7 +7,8 @@ if(have_posts()){
 		the_post();                     
         $post_id= get_the_id();        
         $title=get_the_title($post_id);                          
-        $content=get_the_content($post_id);                
+        $content=get_the_content($post_id);       
+        $excerpt=get_field("single_page_excerpt",$post_id);               
 	}
 	wp_reset_postdata();
 }
@@ -19,6 +20,9 @@ if(have_posts()){
 				<div class="row">
 					<div class="col-lg-8">
 						<h1 class="header-page"><?php echo @$title; ?></h1>
+						<div class="single-excerpt">
+							<?php echo @$excerpt; ?>
+						</div>
 						<div class="than-bai-viet">
 							<?php 
 							if(have_posts()){

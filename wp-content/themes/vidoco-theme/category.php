@@ -1,5 +1,36 @@
 <?php
 get_header();
+global $zController;
+$productModel=$zController->getModel("/frontend","ProductModel");
+/* start set the_query */
+$the_query=null;
+
+$args = $wp_query->query;
+$args['orderby']='id';
+$args['order']='DESC';
+$wp_query->query($args);
+$the_query=$wp_query;	
+
+/* end set the_query */
+/* start setup pagination */
+$totalItemsPerPage=16;
+$pageRange=3;
+$currentPage=1; 
+if(!empty(@$_POST["filter_page"]))          {
+	$currentPage=@$_POST["filter_page"];  
+}
+$productModel->setWpQuery($the_query);   
+$productModel->setPerpage($totalItemsPerPage);        
+$productModel->prepare_items();               
+$totalItems= $productModel->getTotalItems();               
+$arrPagination=array(
+	"totalItems"=>$totalItems,
+	"totalItemsPerPage"=>$totalItemsPerPage,
+	"pageRange"=>$pageRange,
+	"currentPage"=>$currentPage   
+);    
+$pagination=$zController->getPagination("Pagination",$arrPagination); 
+/* end setup pagination */
 ?>
 <div class="container">
 	<div class="row">
@@ -12,29 +43,39 @@ get_header();
 							<h1 class="category-header"><?php single_cat_title(); ?></h1>
 							<div class="category-block">
 								<?php 
-								for ($i=0; $i < 10; $i++) { 
-									?>
-									<div class="category-box">
-										<div class="row">
-											<div class="col-md-3">
-												<a href="javascript:void(0);">
-													<figure>
-														<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/200x163-thi-truong-bds-tp-hcm-phan-khuc-nha-o-vua-tui-tien-chiem-chu-dao.jpg"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/600))"></div>
-													</figure>
-												</a>
-											</div>
-											<div class="col-md-9">
-												<h2 class="category-title"><a href="javascript:void(0);">Thị trường BĐS Tp.HCM: phân khúc nhà ở vừa túi tiền chiếm chủ đạo</a></h2>
-												<div class="category-excerpt">
-													Theo số liệu từ Hiệp hội BĐS Tp.HCM (HoRea), trong năm 2016, với tỷ lệ 79,7%, phân khúc nhà ở vừa túi tiền đang là phân khúc chủ đạo của thị trường BĐS Tp.HCM
+								if($the_query->have_posts()){
+									while ($the_query->have_posts()){
+										$the_query->the_post();
+										$post_id=$the_query->post->ID;		
+										$title=get_the_title($post_id);																
+										$permalink=get_the_permalink($post_id);
+										$featured_img=get_the_post_thumbnail_url($post_id, 'full');	 
+										$excerpt=get_field("single_post_excerpt",@$post_id);
+										?>
+										<div class="category-box">
+											<div class="row">
+												<div class="col-md-3">
+													<a href="<?php echo @$permalink; ?>">
+														<figure>
+															<div style="background-image: url('<?php echo $featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (800/600))"></div>
+														</figure>
+													</a>
+												</div>
+												<div class="col-md-9">
+													<h2 class="category-title"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h2>
+													<div class="category-excerpt">
+														<?php echo @$excerpt; ?>
+													</div>
 												</div>
 											</div>
-										</div>
-									</div>		
-									<?php
-								}
+										</div>		
+										<?php
+									}
+									wp_reset_postdata();
+								}								
 								?>														
-							</div>							
+							</div>
+							<?php echo @$pagination->showPagination();  ?>							
 						</form>						
 					</div>
 					<div class="col-lg-4">
