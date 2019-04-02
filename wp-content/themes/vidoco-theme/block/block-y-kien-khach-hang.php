@@ -1,4 +1,4 @@
-<div class="total-right y-kien-kh-block">
+<!--<div class="total-right y-kien-kh-block">
 	<div class="h-total-right">
 		<h3 class="h-total-right-tieu-de">Ý kiến khách hàng</h3>
 		<div class="clr"></div>
@@ -22,4 +22,4 @@
 		}
 		?>		
 	</div>
-</div>
+</div>-->
