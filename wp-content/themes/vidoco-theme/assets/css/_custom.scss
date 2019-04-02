@@ -700,3 +700,23 @@
 	margin-top: 15px;
 	
 }
+.category-block{
+	padding-bottom:15px;
+	.category-box{
+		margin-bottom: 10px;
+		.category-title{
+			line-height: 15px;
+			a{
+				color: $mau;
+				font-size: 17px;
+				&:hover{
+					color: $mau_1;
+				}
+			}
+		}
+		.category-excerpt{
+			color: #777777;
+			margin-top: 10px;
+		}
+	}
+}
