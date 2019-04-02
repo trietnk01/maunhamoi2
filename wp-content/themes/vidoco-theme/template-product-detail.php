@@ -35,16 +35,16 @@ if(have_posts()){
 								wp_reset_postdata();
 							}
 							?>
-						</div>
+						</div>						
 					</div>
 					<div class="col-lg-4">
 						<?php include get_template_directory()."/block/block-search.php"; ?>
-							<?php include get_template_directory()."/block/block-fanpage.php"; ?>
-							<?php include get_template_directory()."/block/block-video.php"; ?>
-							<?php include get_template_directory()."/block/block-mau-thiet-ke.php"; ?>														
-							<?php include get_template_directory()."/block/block-y-kien-khach-hang.php"; ?>
-							<?php include get_template_directory()."/block/block-ban-quan-tam.php"; ?>
-							<?php include get_template_directory()."/block/block-visitor-counter.php"; ?>
+						<?php include get_template_directory()."/block/block-fanpage.php"; ?>
+						<?php include get_template_directory()."/block/block-video.php"; ?>
+						<?php include get_template_directory()."/block/block-mau-thiet-ke.php"; ?>														
+						<?php include get_template_directory()."/block/block-y-kien-khach-hang.php"; ?>
+						<?php include get_template_directory()."/block/block-ban-quan-tam.php"; ?>
+						<?php include get_template_directory()."/block/block-visitor-counter.php"; ?>
 					</div>
 				</div>
 				<?php include get_template_directory()."/block/block-menu-content-bottom.php"; ?>
