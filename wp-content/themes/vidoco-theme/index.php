@@ -87,7 +87,7 @@
 										</div>
 										<?php
 										$k++;
-										if($k%3==0 || $k==12){
+										if($k%3==0 || $k==count($home_page_za_category_selected)){
 											echo '</div>';
 										}
 									}
@@ -234,7 +234,7 @@
 											wp_reset_postdata();
 										}										
 										$k++;
-										if($k%2 == 0 || $k == 4){
+										if($k%2 == 0 || $k == count($home_page_zaproduct_content_bottom_rpt)){
 											echo '</div>';
 										}
 									}
@@ -242,6 +242,70 @@
 								</div>
 								<?php
 							}
+							$home_page_category_selected=get_field("home_page_category_selected","option");
+							foreach ($home_page_category_selected as $key => $value){
+								$term_category=get_term_by( "id", (float)$value, 'category');	
+								$term_category_permalink= get_term_link($term_category,'category');		
+								?>
+								<h2 class="tham-gia-thiet-ke margin-top-30 category-home-page-link"><a href="<?php echo @$term_category_permalink; ?>"><?php echo @$term_category->name; ?></a></h2>
+								<?php
+								$args=array(
+									"post_type"=>"post",
+									"orderby"=>"id",
+									"order"=>"DESC",
+									"posts_per_page"=>4,
+									"tax_query"=>array(
+										array(
+											'taxonomy' => 'category',
+											'field'    => 'term_id',
+											'terms'    => array((float)@$value),                   
+										),
+									),
+								);
+								$the_query=new WP_Query(@$args);
+								if($the_query->have_posts()){
+									?>
+									<div class="margin-top-5">
+										<?php 
+										$k=0;
+										while ($the_query->have_posts()){
+											$the_query->the_post();
+											$post_id=$the_query->post->ID;                                                       
+											$permalink=get_the_permalink(@$post_id);					
+											$title=get_the_title(@$post_id);					
+											$excerpt=get_the_excerpt(@$post_id);		
+											$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+											if($k%2==0){
+												echo '<div class="row">';
+											}
+											?>
+											<div class="col-md-6">
+												<div class="mau-nha">
+													<div class="mau-nha-left">
+														<a href="<?php echo @$permalink; ?>">
+															<figure>
+																<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>	
+															</figure>
+														</a>
+													</div>
+													<div class="mau-nha-right">
+														<h3 class="mau-nha-right-title"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h3>
+														<div class="readmore"><a href="<?php echo @$permalink; ?>">Xem chi tiết</a></div>
+													</div>
+													<div class="clr"></div>
+												</div>
+											</div>
+											<?php
+											$k++;
+											if($k%2 == 0 || $k == $the_query->post_count){
+												echo '</div>';
+											}
+										}
+										?>
+									</div>
+									<?php
+								}
+							}							
 							?>							
 						</div>
 						<div class="col-lg-4">

@@ -1,3 +1,9 @@
+<?php 
+$q="";
+if(isset($_POST["s"])){
+	$q=$_POST["s"];
+}
+?>
 <div class="total-right">
 	<div class="h-total-right">
 		<h3 class="h-total-right-tieu-de">Tìm kiếm</h3>
