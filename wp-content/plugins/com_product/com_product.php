@@ -35,9 +35,6 @@ function zendvn_sp_session_start(){
 		session_start();
 	}
 }
-require_once PLUGIN_PATH . DS .  'helpers'. DS .'RewriteHelper.php';
-$options['file'] = __FILE__;
-new RewriteHelper($options);
 $zController->getController("/frontend","AjaxController");
 
 
