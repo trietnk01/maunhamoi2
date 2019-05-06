@@ -10,7 +10,7 @@ if ( is_localhost() ) {
 }
 ob_get_clean();
 add_theme_support( 'post-thumbnails' );
-// start ajaxurl 
+// start ajaxurl
 add_action('wp_head', 'myplugin_ajaxurl');
 function myplugin_ajaxurl() {
    echo '<script type="text/javascript">
@@ -29,28 +29,28 @@ function datetimeConverter($date,$format_to){
 // end datetime converter
 // start ddsmoothmenu
 add_action('wp_head', 'add_code_ddsmoothmenu');
-function add_code_ddsmoothmenu(){			
-	$chuoi= '	
-	<script type="text/javascript" language="javascript">	
+function add_code_ddsmoothmenu(){
+	$chuoi= '
+	<script type="text/javascript" language="javascript">
 	ddsmoothmenu.init({
-			mainmenuid: "smoothmainmenu", 
-			orientation: "h", 
+			mainmenuid: "smoothmainmenu",
+			orientation: "h",
 			classname: "ddsmoothmenu",
-			contentsource: "markup" 
-		});	
+			contentsource: "markup"
+		});
 	ddsmoothmenu.init({
-			mainmenuid: "smoothmainmenumobile", 
-			orientation: "h", 
+			mainmenuid: "smoothmainmenumobile",
+			orientation: "h",
 			classname: "ddsmoothmobile",
-			contentsource: "markup" 
+			contentsource: "markup"
 		});
 	</script>
-	    ';				
+	    ';
 	echo $chuoi;
 }
 // end ddsmoothmenu
 /* begin template include */
-add_filter( 'template_include', 'portfolio_page_template');
+/*add_filter( 'template_include', 'portfolio_page_template');
 function portfolio_page_template( $template ) {
 
 	$id=get_queried_object_id();
@@ -58,21 +58,21 @@ function portfolio_page_template( $template ) {
 	$term=get_term_by('id', $id,'category');
 	if(!empty($term)){
 		$slug=$term->slug;
-	}	
+	}
 	if(get_query_var('za_category') != ''){
 		$file = get_template_directory() . '/template-za-category.php';
 		if(file_exists($file)){
 			return $file;
-		}			
-	}	
+		}
+	}
 	if(get_query_var('zaproduct') != ''){
 		$file = get_template_directory() . '/template-product-detail.php';
 		if(file_exists($file)){
 			return $file;
-		}			
-	}		
+		}
+	}
 	return $template;
-}
+}*/
 /* end template include */
 /* begin str_slug */
 function str_slug( $filename ) {
@@ -96,7 +96,7 @@ function str_slug( $filename ) {
 function bcd_comment($comment, $args, $depth)    {
     $GLOBALS['comment'] = $comment; ?>
     <li <?php comment_class();?> id="li-comment-<?php comment_ID();?>">
-     
+
         <div id="comment-<?php comment_ID();?>" class="clearfix comment-body">
             <div class="comment-author vcard">
                 <?php echo get_avatar($comment, $size='60', $default='<path_to_url>'); ?>

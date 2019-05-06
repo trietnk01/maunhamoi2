@@ -39,7 +39,7 @@ foreach ($sidebar_right_product_block_rpt as $key => $value) {
 								<div class="mau-thiet-ke-right">
 									<h4 class="mau-thiet-ke-right-h4"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h4>
 									<div class="margin-top-10">
-										<span><i class="far fa-clock"></i></span><span class="margin-left-15"><?php echo @$date_post; ?></span><span class="margin-left-15"><i class="far fa-heart"></i></span>
+										<span><i class="far fa-clock"></i></span><span class="margin-left-5"><?php echo @$date_post; ?></span><span class="margin-left-5"><i class="far fa-heart"></i></span>
 									</div>
 								</div>
 								<div class="clr"></div>
