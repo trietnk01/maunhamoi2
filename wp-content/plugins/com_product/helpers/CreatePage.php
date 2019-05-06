@@ -35,7 +35,7 @@ class CreatePage{
 					'login.php' => 'Đăng nhập',
 					'security.php' => 'Bảo mật',
 					'history.php' => 'Lịch sử giao dịch',
-					'search-article.php' => 'Tìm kiếm bài viết',
+					'search-video.php' => 'Tìm kiếm video',
 					'search-product.php' => 'Tìm kiếm sản phẩm',
 				);
 	}

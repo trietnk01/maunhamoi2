@@ -21,11 +21,7 @@ if(is_admin()){
 	require_once 'backend.php';
 	new Backend();
 	$zController->getHelper("AdminMenu");
-	$zController->getController('/backend','AdminManufacturerController');
-	$zController->getController('/backend','AdminCategoryController');
 	$zController->getController('/backend','AdminProductController');
-	$zController->getController('/backend','AdminProductTradeController');
-	$zController->getController('/backend','AdminUnitController');
 }else{
 	if(count($zendvn_sp_settings) == 0){
 		$zendvn_sp_settings = $zController->getConfig('SettingConfig')->get();
