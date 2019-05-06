@@ -1,4 +1,4 @@
-<?php 
+<?php
 $sidebar_right_product_block_rpt=get_field("sidebar_right_product_block_rpt","option");
 foreach ($sidebar_right_product_block_rpt as $key => $value) {
 	?>
@@ -7,11 +7,11 @@ foreach ($sidebar_right_product_block_rpt as $key => $value) {
 			<h3 class="h-total-right-tieu-de"><?php echo @$value["sidebar_right_product_block_title"]; ?></h3>
 			<div class="clr"></div>
 		</div>
-		<?php 
+		<?php
 		if(count(@$value["sidebar_right_product_block_list"])){
 			?>
 			<div class="margin-top-5 bo-mau-thiet-ke">
-				<?php 
+				<?php
 				foreach (@$value["sidebar_right_product_block_list"] as $key => $value) {
 					$args=array(
 						"post_type"=>"zaproduct",
@@ -21,33 +21,39 @@ foreach ($sidebar_right_product_block_rpt as $key => $value) {
 					if($the_query->have_posts()){
 						while ($the_query->have_posts()) {
 							$the_query->the_post();
-							$post_id=$the_query->post->ID;                                                       
-							$permalink=get_the_permalink(@$post_id);					
-							$title=get_the_title(@$post_id);					
-							$excerpt=get_the_excerpt(@$post_id);		
+							$post_id=$the_query->post->ID;
+							$permalink=get_the_permalink(@$post_id);
+							$title=get_the_title(@$post_id);
+							$excerpt=get_the_excerpt(@$post_id);
 							$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+							$date_post=get_the_date('d/m/Y',@$post_id);
 							?>
 							<div class="roda-mau-thiet-ke">
 								<div class="mau-thiet-ke-left">
 									<a href="<?php echo @$permalink; ?>">
 										<figure>
-											<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>	
+											<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (100/100));"></div>
 										</figure>
-									</a>					
+									</a>
 								</div>
-								<h4 class="mau-thiet-ke-right"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h4>
+								<div class="mau-thiet-ke-right">
+									<h4 class="mau-thiet-ke-right-h4"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h4>
+									<div class="margin-top-10">
+										<span><i class="far fa-clock"></i></span><span class="margin-left-15"><?php echo @$date_post; ?></span><span class="margin-left-15"><i class="far fa-heart"></i></span>
+									</div>
+								</div>
 								<div class="clr"></div>
 							</div>
 							<?php
 						}
 						wp_reset_postdata();
-					}					
+					}
 				}
-				?>		
+				?>
 			</div>
-			<?php			
+			<?php
 		}
-		?>		
+		?>
 	</div>
 	<?php
 }

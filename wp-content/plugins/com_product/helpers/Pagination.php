@@ -20,18 +20,18 @@ class Pagination{
 	public function showPagination(){		
 		$paginationHTML = '';
 		if($this->totalPage > 1){
-			$start 	= '<li ><span class="current"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span></li>';
-			$prev 	= '<li ><span class="current"><i class="fa fa-angle-left" aria-hidden="true"></i></span></li>';
+			$start 	= '<li ><span>Bắt đầu</span></li>';
+			$prev 	= '<li ><span>Lùi</span></li>';
 			if($this->currentPage > 1){
-				$start 	= '<li ><a onclick="javascript:changePage(1,this)" href="javascript:void(0);"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>';
-				$prev 	= '<li ><a onclick="javascript:changePage('.($this->currentPage-1).',this)" href="javascript:void(0);"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>';
+				$start 	= '<li ><a onclick="javascript:changePage(1,this)" href="javascript:void(0);">Bắt đầu</a></li>';
+				$prev 	= '<li ><a onclick="javascript:changePage('.($this->currentPage-1).',this)" href="javascript:void(0);">Lùi</a></li>';
 			}
 		
-			$next 	= '<li ><span class="current"><i class="fa fa-angle-right" aria-hidden="true"></i></span></li>';
-			$end 	= '<li ><span class="current"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span></li>';
+			$next 	= '<li ><span>Tiếp theo</span></li>';
+			$end 	= '<li ><span>Cuối</span></li>';
 			if($this->currentPage < $this->totalPage){
-				$next 	= '<li ><a onclick="javascript:changePage('.($this->currentPage+1).',this)" href="javascript:void(0);"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>';
-				$end 	= '<li ><a href="javascript:void(0);" onclick="javascript:changePage('.$this->totalPage.',this)"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>';
+				$next 	= '<li ><a onclick="javascript:changePage('.($this->currentPage+1).',this)" href="javascript:void(0);">Tiếp theo</a></li>';
+				$end 	= '<li ><a href="javascript:void(0);" onclick="javascript:changePage('.$this->totalPage.',this)">Cuối</a></li>';
 			}
 		
 			if($this->pageRange < $this->totalPage){
@@ -63,14 +63,14 @@ class Pagination{
 			$listPages = '';
 			for($i = $startPage; $i <= $endPage; $i++){
 				if($i == $this->currentPage) {
-					$listPages .= '<li ><span class="current">'.$i.'</span></li>';
+					$listPages .= '<li class="active"><span>'.$i.'</span></li>';
 				}else{
 					$listPages .= '<li><a href="javascript:void(0);" onclick="javascript:changePage('.$i.',this)">'.$i.'</a></li>';
 				}
 			}
 			$listPages .= '';
 			$endPagination	= '<li >Page '.$this->currentPage.' of '.$this->totalPage.'</li>';
-			$paginationHTML = '<ul class="page-numbers">' . $start . $prev . $listPages . $next . $end  . '</ul>';
+			$paginationHTML = '<ul class="pagination">' . $start . $prev . $listPages . $next . $end  . '</ul>';
 		}
 		return $paginationHTML;
 	}

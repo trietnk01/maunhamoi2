@@ -9,27 +9,27 @@ $args = $wp_query->query;
 $args['orderby']='id';
 $args['order']='DESC';
 $wp_query->query($args);
-$the_query=$wp_query;	
+$the_query=$wp_query;
 
 /* end set the_query */
 /* start setup pagination */
 $totalItemsPerPage=16;
 $pageRange=3;
-$currentPage=1; 
+$currentPage=1;
 if(!empty(@$_POST["filter_page"]))          {
-	$currentPage=@$_POST["filter_page"];  
+	$currentPage=@$_POST["filter_page"];
 }
-$productModel->setWpQuery($the_query);   
-$productModel->setPerpage($totalItemsPerPage);        
-$productModel->prepare_items();               
-$totalItems= $productModel->getTotalItems();               
+$productModel->setWpQuery($the_query);
+$productModel->setPerpage($totalItemsPerPage);
+$productModel->prepare_items();
+$totalItems= $productModel->getTotalItems();
 $arrPagination=array(
 	"totalItems"=>$totalItems,
 	"totalItemsPerPage"=>$totalItemsPerPage,
 	"pageRange"=>$pageRange,
-	"currentPage"=>$currentPage   
-);    
-$pagination=$zController->getPagination("Pagination",$arrPagination); 
+	"currentPage"=>$currentPage
+);
+$pagination=$zController->getPagination("Pagination",$arrPagination);
 /* end setup pagination */
 ?>
 <div class="container">
@@ -42,14 +42,14 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
 							<input type="hidden" name="filter_page" value="1" />
 							<h1 class="category-header"><?php single_cat_title(); ?></h1>
 							<div class="category-block">
-								<?php 
+								<?php
 								if($the_query->have_posts()){
 									while ($the_query->have_posts()){
 										$the_query->the_post();
-										$post_id=$the_query->post->ID;		
-										$title=get_the_title($post_id);																
+										$post_id=$the_query->post->ID;
+										$title=get_the_title($post_id);
 										$permalink=get_the_permalink($post_id);
-										$featured_img=get_the_post_thumbnail_url($post_id, 'full');	 
+										$featured_img=get_the_post_thumbnail_url($post_id, 'full');
 										$excerpt=get_field("single_post_excerpt",@$post_id);
 										?>
 										<div class="category-box">
@@ -68,31 +68,32 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
 													</div>
 												</div>
 											</div>
-										</div>		
+										</div>
 										<?php
 									}
 									wp_reset_postdata();
-								}								
-								?>														
+								}
+								?>
 							</div>
-							<?php echo @$pagination->showPagination();  ?>							
-						</form>						
+							<?php echo @$pagination->showPagination();  ?>
+						</form>
 					</div>
 					<div class="col-lg-4">
 						<?php include get_template_directory()."/block/block-search.php"; ?>
 						<?php include get_template_directory()."/block/block-fanpage.php"; ?>
 						<?php include get_template_directory()."/block/block-video.php"; ?>
-						<?php include get_template_directory()."/block/block-mau-thiet-ke.php"; ?>														
+						<?php include get_template_directory()."/block/block-mau-thiet-ke.php"; ?>
 						<?php include get_template_directory()."/block/block-y-kien-khach-hang.php"; ?>
 						<?php include get_template_directory()."/block/block-ban-quan-tam.php"; ?>
 						<?php include get_template_directory()."/block/block-visitor-counter.php"; ?>
 					</div>
 				</div>
 				<?php include get_template_directory()."/block/block-menu-content-bottom.php"; ?>
+				<?php include get_template_directory()."/block/block-google-map.php"; ?>
 			</div>
 		</div>
 	</div>
 </div>
 <?php
-get_footer(); 
+get_footer();
 ?>

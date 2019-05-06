@@ -1,6 +1,6 @@
 .bg-white-general{
 	background:#ffffff;
-	.banner-header{		
+	.banner-header{
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
@@ -12,7 +12,7 @@
 			display: none;
 		}
 	}
-	.bg-related-product{	
+	.bg-related-product{
 		padding-left: 0;
 		list-style: none;
 		margin-bottom: 0;
@@ -47,7 +47,7 @@
 	}
 	.header-bg-mobile{
 		position: relative;
-		display: none;		
+		display: none;
 		background-color: #ffffff;
 		@media(max-width: 992px){
 			display: block;
@@ -127,7 +127,7 @@
 				}
 			}
 		}
-		.banner-title-excerption{			
+		.banner-title-excerption{
 			background: #000;
 			border-top: 10px solid $mau_1;
 			padding-left:15px;
@@ -140,7 +140,7 @@
 					color: #ffffff;
 					font-size: 20px;
 					font-family: $f_regular6;
-				}				
+				}
 			}
 			.banner-excerption{
 				color: #ffffff;
@@ -162,7 +162,7 @@
 			.category-frontend-halo{
 				background:#000;
 				.category-frontend-title-left{
-					float: left;					
+					float: left;
 					background: $mau_1;
 					padding: 5px 5px;
 					a{
@@ -173,8 +173,8 @@
 							text-decoration: underline;
 						}
 					}
-				}				
-			}	
+				}
+			}
 			.title-category-frontend{
 				line-height: 15px;
 				a{
@@ -199,7 +199,7 @@
 						background:#333333;
 					}
 				}
-			}		
+			}
 		}
 	}
 	.tham-gia-thiet-ke{
@@ -212,13 +212,13 @@
 		font-weight: bold;
 		padding-left: 10px;
 		padding-right: 10px;
-	}	
+	}
 	.f-category-left{
 		width: 40%;
-		float: left;	
+		float: left;
 		@media(max-width: 240px){
 			width: 100%;
-		}			
+		}
 		.ranet{
 			text-align: center;
 			margin-top: 30px;
@@ -233,13 +233,13 @@
 		}
 	}
 	.f-category-right{
-		float: left;		
+		float: left;
 		width: 55%;
 		margin-left: 10px;
 		@media(max-width: 240px){
 			margin-left: 0;
 			width: 100%;
-		}		
+		}
 		.y-kien{
 			line-height: 20px;
 			a{
@@ -265,37 +265,37 @@
 				}
 			}
 		}
-	}	
+	}
 	.bao-gia{
 		margin-bottom: 15px;
 		&:first-child{
 			@media(max-width: 740px){
 				margin-top: 30px;
-			}			
+			}
 		}
 		@media(max-width: 320px){
 			margin-bottom: 30px;
 		}
 		.bao-gia-left{
 			float: left;
-			width: 30%;	
+			width: 30%;
 			@media(max-width: 240px){
 				width: 100%;
-			}		
+			}
 		}
 		.bao-gia-right{
 			float: left;
-			width: 60%;			
-			margin-left: 10px;	
+			width: 60%;
+			margin-left: 10px;
 			@media(max-width: 740px){
 				width: 65%;
-			}		
+			}
 			@media(max-width: 240px){
 				width: 100%;
 				margin-left: 0;
-			}		
+			}
 			.nam-nay{
-				line-height: 15px;						
+				line-height: 15px;
 				a{
 					color: $mau;
 					font-size: 13px;
@@ -316,19 +316,19 @@
 		}
 		.mau-nha-left{
 			float: left;
-			width: 30%;	
+			width: 30%;
 			@media(max-width: 240px){
 				width: 100%;
-			}		
+			}
 		}
 		.mau-nha-right{
-			float: left;			
+			float: left;
 			margin-left: 10px;
-			width: 65%;	
+			width: 65%;
 			@media(max-width: 240px){
 				width: 100%;
 				margin-left: 0;
-			}		
+			}
 			.mau-nha-right-title{
 				line-height: 15px;
 				a{
@@ -353,7 +353,7 @@
 					padding-left:10px;
 					padding-right:10px;
 					&:hover{
-						background-color:$mau;						
+						background-color:$mau;
 					}
 				}
 			}
@@ -397,7 +397,7 @@
 				}
 				@media(max-width: 240px){
 					width: 63%;
-				}				
+				}
 				.input-box{
 					border: 1px solid #ddd;
 					width:100%;
@@ -419,7 +419,7 @@
 					padding-right: 15px;
 					font-size: 15px;
 				}
-			}			
+			}
 		}
 	}
 	.maradies{
@@ -435,42 +435,44 @@
 				margin-bottom: 20px;
 				.mau-thiet-ke-left{
 					float: left;
-					width: 30%;	
+					width: 30%;
 					@media(max-width: 240px){
 						width: 100%;
-					}				
+					}
 				}
 				.mau-thiet-ke-right{
 					float: left;
 					width: 65%;
 					margin-left: 10px;
-					line-height: 16px;	
 					@media(max-width: 240px){
 						width: 100%;
 						margin-left: 0;
-					}				
-					a{
-						color: $mau;
-						font-size: 15px;
-						font-weight: bold;
-						&:hover{
-							color: $mau_1;
+					}
+					.mau-thiet-ke-right-h4{
+						line-height: 16px;
+						a{
+							color: $mau;
+							font-size: 15px;
+							font-weight: bold;
+							&:hover{
+								color: $mau_1;
+							}
 						}
 					}
 				}
-			}			
+			}
 		}
 	}
 	.y-kien-kh-block{
 		.y-kien-khach-hang-box{
 			padding-top:10px;
-			.y-kien-kh-item{	
-				margin-bottom: 10px;	
+			.y-kien-kh-item{
+				margin-bottom: 10px;
 				border-bottom:1px solid $mau;
-				padding-bottom: 10px;	
+				padding-bottom: 10px;
 				&:last-child{
 					border-bottom:0;
-				}	
+				}
 				.y-kien-kh-item-left{
 					float: left;
 					width: 25%;
@@ -482,12 +484,12 @@
 					}
 				}
 				.y-kien-kh-item-right{
-					float: left;					
-					margin-left: 10px;		
+					float: left;
+					margin-left: 10px;
 					@media(max-width: 240px){
 						margin-left: 0;
 						margin-top: 5px;
-					}			
+					}
 					.ten-khach-hang{
 						font-size: 14px;
 						font-weight: bold;
@@ -581,6 +583,7 @@
 				padding-left:5px;
 				padding-right:5px;
 				line-height: 16px;
+				min-height: 60px;
 				a{
 					color: #ffffff;
 					font-size: 14px;
@@ -591,11 +594,9 @@
 					}
 				}
 			}
-			.product-item-box-image{
-				margin-top: 10px;
-			}
 			.product-item-box-title-2{
 				line-height: 15px;
+				margin-top: 15px;
 				a{
 					color: $mau;
 					font-size: 15px;
@@ -606,7 +607,7 @@
 			}
 			.xem-chi-tiet{
 				text-align: right;
-				margin-top: 5px;
+				margin-top: 15px;
 				a{
 					background-color:$mau_1;
 					color: #ffffff;
@@ -651,10 +652,10 @@
 					padding-right: 15px;
 					font-size: 20px;
 					&:hover{
-						background-color:$mau;						
+						background-color:$mau;
 					}
 				}
-			}			
+			}
 		}
 		.thong-tin-box{
 			margin-top: 25px;
@@ -677,7 +678,7 @@
 					margin-top: 5px;
 				}
 			}
-		}		
+		}
 	}
 }
 .talet{
@@ -685,7 +686,7 @@
 	padding-top:20px;
 	padding-bottom:20px;
 	text-align: center;
-	color: #ffffff;	
+	color: #ffffff;
 	border-top:2px solid #484848;
 }
 .main-breadcrumb{
@@ -698,7 +699,7 @@
 }
 .single-excerpt{
 	margin-top: 15px;
-	
+
 }
 .category-block{
 	padding-top:15px;
