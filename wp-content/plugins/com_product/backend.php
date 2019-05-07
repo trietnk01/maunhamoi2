@@ -44,16 +44,11 @@ class Backend{
 			array($this,'dispatch_function'),'',3);
 		add_submenu_page($this->_menuSlug, 'Invoice', 'Đơn đặt hàng', 'manage_options',
 			$this->_menuSlug . '-invoice',array($this,'dispatch_function'));
-		add_submenu_page($this->_menuSlug, 'Setting', 'Cấu hình', 'manage_options',
-			$this->_menuSlug . '-setting',array($this,'dispatch_function'));
 	}
 	public function dispatch_function(){
 		global $zController;
 		$page = $this->_page;
 		switch ($page) {
-			case 'zendvn-sp-manager-setting':
-			$zController->getController('/backend','AdminSettingController');
-			break;
 			case 'zendvn-sp-manager-invoice':
 			$zController->getController('/backend','AdminInvoiceController');
 			break;
