@@ -852,11 +852,16 @@
 	background-color: #444;
 	padding: 5px 10px;
 	border-radius: 8px;
+	@media(max-width: 992px){
+		padding: 0 10px;
+	}
 	.kts-tu-van-nhanh{
 		color: #f8c506;
 		text-transform: uppercase;
+		font-family: $f_bold7;
 	}
 	.phone-kts-tu-van-nhanh{
 		color:#ffffff;
+		font-family: $f_bold7;
 	}
 }
