@@ -13,7 +13,7 @@ $the_query=$wp_query;
 
 /* end set the_query */
 /* start setup pagination */
-$totalItemsPerPage=14;
+$totalItemsPerPage=16;
 $pageRange=3;
 $currentPage=1;
 if(!empty(@$_POST["filter_page"]))          {

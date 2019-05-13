@@ -47,3 +47,6 @@
     ?>
 </div>
 <?php echo @$pagination->showPagination();  ?>
+<div class="margin-top-15">
+    <?php include get_template_directory()."/block/block-main-product.php"; ?>
+</div>

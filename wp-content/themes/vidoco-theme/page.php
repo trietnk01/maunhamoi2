@@ -34,6 +34,7 @@ if(have_posts()){
 							}
 							?>
 						</div>
+						<?php include get_template_directory()."/block/block-main-product.php"; ?>
 					</div>
 					<div class="col-lg-4">
 						<?php include get_template_directory()."/block/block-search.php"; ?>

@@ -35,6 +35,9 @@ if(have_posts()){
 							?>
 						</div>
 						<?php comments_template( '', true ); ?>
+						<div class="margin-top-15">
+    <?php include get_template_directory()."/block/block-main-product.php"; ?>
+</div>
 					</div>
 					<div class="col-lg-4">
 						<?php include get_template_directory()."/block/block-search.php"; ?>

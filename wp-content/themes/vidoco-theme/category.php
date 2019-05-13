@@ -77,6 +77,9 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
 							</div>
 							<?php echo @$pagination->showPagination();  ?>
 						</form>
+						<div class="margin-top-15">
+							<?php include get_template_directory()."/block/block-main-product.php"; ?>
+						</div>
 					</div>
 					<div class="col-lg-4">
 						<?php include get_template_directory()."/block/block-search.php"; ?>
