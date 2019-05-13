@@ -12,41 +12,44 @@
 					<div class="row">
 						<div class="col-lg-9">
 							<?php
-							$home_page_zaproduct_rpt=get_field("home_page_zaproduct_rpt","option");
-							if(count(@$home_page_zaproduct_rpt) > 0){
+							$args = array(
+								'post_type' => 'zaproduct',
+								'orderby' => 'id',
+								'order'   => 'DESC',
+								'posts_per_page' => 9,
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'za_category',
+										'field'    => 'slug',
+										'terms'    => array("biet-thu-dep"),
+									),
+								),
+							);
+							$the_query=new WP_Query($args);
+							if($the_query->have_posts()){
 								?>
 								<div class="owl-carousel-banner owl-carousel owl-theme owl-loaded">
 									<?php
-									foreach($home_page_zaproduct_rpt as $key => $value) {
-										$post_id=$value["home_page_zaproduct_item"];
-										$args=array(
-											"post_type"=>"zaproduct",
-											"p"=>@$post_id
-										);
-										$the_query=new WP_Query($args);
-										if($the_query->have_posts()){
-											while ($the_query->have_posts()) {
-												$the_query->the_post();
-												$post_id=$the_query->post->ID;
-												$permalink=get_the_permalink(@$post_id);
-												$title=get_the_title(@$post_id);
-												$excerpt=get_the_excerpt(@$post_id);
-												$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
-												?>
-												<div class="item">
-													<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (775/445))">
-													</div>
-													<hr class="banner-line">
-													<div class="banner-title-excerption">
-														<div class="banner-title"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></div>
-														<div class="banner-excerption"><?php echo @$excerpt; ?></div>
-													</div>
-												</div>
-												<?php
-											}
-											wp_reset_postdata();
-										}
+									while ($the_query->have_posts()) {
+										$the_query->the_post();
+										$post_id=$the_query->post->ID;
+										$permalink=get_the_permalink(@$post_id);
+										$title=get_the_title(@$post_id);
+										$excerpt=get_the_excerpt(@$post_id);
+										$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+										?>
+										<div class="item">
+											<div style="background-image: url('<?php echo @$featured_img; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100% / (775/445))">
+											</div>
+											<hr class="banner-line">
+											<div class="banner-title-excerption">
+												<div class="banner-title"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></div>
+												<div class="banner-excerption"><?php echo @$excerpt; ?></div>
+											</div>
+										</div>
+										<?php
 									}
+									wp_reset_postdata();
 									?>
 								</div>
 								<?php

@@ -95,12 +95,12 @@
 	.owl-carousel-banner{
 		div{
 			&.owl-prev{
-				background: $mau_1;
+				background: #0093ff;
 				font-size: 15px;
 				color: #ffffff;
 				position: absolute;
 				left:10px;
-				top:10px;
+				top:210px;
 				border-radius: 0;
 				padding-left: 15px;
 				padding-right: 17px;
@@ -111,12 +111,12 @@
 				}
 			}
 			&.owl-next{
-				background:$mau_1;
+				background:#0093ff;
 				font-size: 15px;
 				color: #ffffff;
 				position: absolute;
-				left: 55px;
-				top: 10px;
+				right: 10px;
+				top: 210px;
 				border-radius: 0;
 				padding-left: 15px;
 				padding-right: 17px;
@@ -128,8 +128,8 @@
 			}
 		}
 		.banner-title-excerption{
-			background: #000;
-			border-top: 10px solid $mau_1;
+			background:#888888;
+			border-top: 5px solid #0093ff;
 			padding-left:15px;
 			padding-right:15px;
 			padding-bottom:15px;
@@ -139,13 +139,13 @@
 				a{
 					color: #ffffff;
 					font-size: 20px;
-					font-family: $f_regular6;
+					font-family: $f_bold7;
 				}
 			}
 			.banner-excerption{
 				color: #ffffff;
 				font-size: 14px;
-				font-family: $f_regular6;
+				font-family: $f_regular7;
 			}
 		}
 		.banner-line{
@@ -441,7 +441,7 @@
 	}
 	.total-right{
 		.h-total-right{
-			background-color:$mau;
+			background-color:#888888;
 			.h-total-right-tieu-de{
 				float: left;
 				background: #E84747;
