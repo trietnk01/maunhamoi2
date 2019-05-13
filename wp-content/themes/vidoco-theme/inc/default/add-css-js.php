@@ -42,7 +42,7 @@ if(!function_exists('p_load_css_js')){
         wp_enqueue_script('waypoints.min',get_template_directory_uri() . '/assets/counterup/waypoints.min.js',array('jquery'),@$js_css_ran,true);
         // end counterup
         // begin scroll-top
-        wp_enqueue_script('scroll-top',get_template_directory_uri() . '/assets/vidoco-js/scroll-top.js',array('jquery'),@$js_css_ran,true);
+        wp_enqueue_script('scroll-top',get_template_directory_uri() . '/assets/demo-js/scroll-top.js',array('jquery'),@$js_css_ran,true);
         // end scroll-top
         // start ddsmoothmenu
         wp_enqueue_script('ddsmoothmenu_js',get_template_directory_uri() . '/assets/ddsmoothmenu/js/ddsmoothmenu.js',array('jquery'),@$js_css_ran,false);
@@ -56,16 +56,16 @@ if(!function_exists('p_load_css_js')){
         wp_enqueue_script('jquery.matchHeight-min',get_template_directory_uri() . '/assets/jquery/jquery.matchHeight-min.js',array('jquery'),@$js_css_ran,true);
         // end matchHeight-min
         // begin  carousel-pro
-        wp_enqueue_script('carousel-pro',get_template_directory_uri() . '/assets/vidoco-js/owl-carousel-pro.js',array('jquery'),@$js_css_ran,true);
+        wp_enqueue_script('carousel-pro',get_template_directory_uri() . '/assets/demo-js/owl-carousel-pro.js',array('jquery'),@$js_css_ran,true);
         // end   carousel-pro
-        wp_enqueue_style('pcss', get_template_directory_uri() . '/assets/vidoco-scss/pcss.css',array(),@$js_css_ran,'all');
+        wp_enqueue_style('pcss', get_template_directory_uri() . '/assets/demo-scss/pcss.css',array(),@$js_css_ran,'all');
         // begin alo_phone
         wp_enqueue_style('alophonecss',get_template_directory_uri() . '/assets/alophone/css/callnow.css',array(),@$js_css_ran,'all');
         // end alo_phone
         // begin custom
-        wp_enqueue_style('stylecss',get_template_directory_uri() . '/assets/vidoco-scss/style.css',array(),@$js_css_ran,'all');
-        wp_enqueue_script('funcjs',get_template_directory_uri() . '/assets/vidoco-js/function.js',array('jquery'),@$js_css_ran,true);
-        wp_enqueue_script('customjs',get_template_directory_uri() . '/assets/vidoco-js/custom.js',array('jquery'),@$js_css_ran,true);
+        wp_enqueue_style('stylecss',get_template_directory_uri() . '/assets/demo-scss/style.css',array(),@$js_css_ran,'all');
+        wp_enqueue_script('funcjs',get_template_directory_uri() . '/assets/demo-js/function.js',array('jquery'),@$js_css_ran,true);
+        wp_enqueue_script('customjs',get_template_directory_uri() . '/assets/demo-js/custom.js',array('jquery'),@$js_css_ran,true);
         // end custom
     }
 }
