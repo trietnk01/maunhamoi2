@@ -49,31 +49,6 @@ function add_code_ddsmoothmenu(){
 	echo $chuoi;
 }
 // end ddsmoothmenu
-/* begin template include */
-/*add_filter( 'template_include', 'portfolio_page_template');
-function portfolio_page_template( $template ) {
-
-	$id=get_queried_object_id();
-	$slug="";
-	$term=get_term_by('id', $id,'category');
-	if(!empty($term)){
-		$slug=$term->slug;
-	}
-	if(get_query_var('za_category') != ''){
-		$file = get_template_directory() . '/template-za-category.php';
-		if(file_exists($file)){
-			return $file;
-		}
-	}
-	if(get_query_var('zaproduct') != ''){
-		$file = get_template_directory() . '/template-product-detail.php';
-		if(file_exists($file)){
-			return $file;
-		}
-	}
-	return $template;
-}*/
-/* end template include */
 /* begin str_slug */
 function str_slug( $filename ) {
     $sanitized_filename = remove_accents( $filename ); // Convert to ASCII

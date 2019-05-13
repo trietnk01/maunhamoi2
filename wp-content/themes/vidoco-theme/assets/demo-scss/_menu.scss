@@ -1,56 +1,56 @@
-.ddsmoothmenu{  
+.ddsmoothmenu{
   ul{
     li{
       ul{
         li{
-          a{ 
+          a{
             font-family:$f_regular;
             font-size: 14px;
-            text-transform: uppercase;                
+            text-transform: uppercase;
             background-color: $logo_bg;
             &:link,&:visited{
               color: #fff;
-            }          
+            }
           }
         }
       }
-    }    
+    }
   }
-  >ul{    
+  >ul{
     >li{
       >a{
         font-family:$f_regular6;
         font-size: 15px;
-        text-transform: uppercase;               
-        background:transparent;                 
-        padding:11px 20px;         
-        border-right: 0;
+        text-transform: uppercase;
+        background:transparent;
+        padding:11px 20px;
+        border-right: 1px solid #ffffff8c;
         @media(max-width: 1024px){
           padding: 10px 13px;
-        } 
+        }
         &:link,&:visited{
           color: #ffffff;
-        }                     
-        &:hover,&.selected{  
+        }
+        &:hover,&.selected{
           color: #fff;
-          background:#E84747 !important;
-        }         
+          background:#a70000 !important;
+        }
       }
       &:last-child{
         a{
           border-right: 0;
         }
-      } 
+      }
       &.current-menu-item{
         >a{
-          background:#E84747;   
+          background:#a70000;
           color: #ffffff;
         }
-      }   
+      }
     }
   }
   >ul{
-    >li{      
+    >li{
       >ul{
         margin-top: -20px;
         li{
@@ -58,20 +58,20 @@
             border-right: 1px solid #0090cf ;
             border-bottom: 1px solid #0090cf;
             width: 230px;
-            padding: 10px 10px;   
-            font-family: $f_bold;                     
+            padding: 10px 10px;
+            font-family: $f_bold;
             &:hover,&.selected{
               background-color: $logo_bg !important;
-              color: #fff;            
+              color: #fff;
             }
           }
           &.current-menu-item{
             a{
-              background-color: $logo_bg !important;                           
+              background-color: $logo_bg !important;
             }
-          }   
+          }
         }
       }
-    }    
-  }  
+    }
+  }
 }

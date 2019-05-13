@@ -28,8 +28,8 @@ acf_add_options_sub_page(array(
 	'parent_slug'	=> 'p-option-page',
 ));
 acf_add_options_sub_page(array(
-	'page_title' 	=> 'Sản phẩm bên phải',
-	'menu_title'	=> 'Sản phẩm bên phải',
+	'page_title' 	=> 'Cột bên phải',
+	'menu_title'	=> 'Cột bên phải',
 	'menu_slug' 	=> 'product_right_sidebar_page',
 	'parent_slug'	=> 'p-option-page',
 ));
