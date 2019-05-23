@@ -55,6 +55,9 @@ if(!function_exists('p_load_css_js')){
         // begin matchHeight-min
         wp_enqueue_script('jquery.matchHeight-min',get_template_directory_uri() . '/assets/jquery/jquery.matchHeight-min.js',array('jquery'),@$js_css_ran,true);
         // end matchHeight-min
+        // begin  accounting
+        wp_enqueue_script('accounting',get_template_directory_uri() . '/assets/demo-js/accounting.min.js',array('jquery'),@$js_css_ran,true);
+        // end   accounting
         // begin  carousel-pro
         wp_enqueue_script('carousel-pro',get_template_directory_uri() . '/assets/demo-js/owl-carousel-pro.js',array('jquery'),@$js_css_ran,true);
         // end   carousel-pro
