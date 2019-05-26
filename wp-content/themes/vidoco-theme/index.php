@@ -10,7 +10,7 @@
 			<div class="col">
 				<div class="body-bg">
 					<div class="row">
-						<div class="col-lg-9">
+						<div class="col-lg-8">
 							<?php
 							$args = array(
 								'post_type' => 'zaproduct',
@@ -106,7 +106,7 @@
 							?>
 						<?php include get_template_directory()."/block/block-main-product.php"; ?>
 						</div>
-						<div class="col-lg-3">
+						<div class="col-lg-4">
 							<?php include get_template_directory()."/block/block-search.php"; ?>
 							<?php include get_template_directory()."/block/block-fanpage.php"; ?>
 							<?php include get_template_directory()."/block/block-video.php"; ?>

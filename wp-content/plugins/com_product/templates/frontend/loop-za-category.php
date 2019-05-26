@@ -5,10 +5,10 @@
         while ($the_query->have_posts()) {
             $the_query->the_post();
             $post_id=$the_query->post->ID;
-            $title=wp_trim_words( get_the_title($post_id), 10, null ) ;
+            $title= get_the_title($post_id)  ;
             $permalink=get_the_permalink($post_id);
             $featured_img=get_the_post_thumbnail_url($post_id, 'full');
-            $excerpt=wp_trim_words(  get_the_excerpt( $post_id ), 25,null );
+            $excerpt=get_the_excerpt( $post_id ) ;
             $date_post=get_the_date('d/m/Y',@$post_id);
             if((float)@$k % 2 == 0){
                 echo '<div class="row">';
@@ -24,8 +24,8 @@
                         </a>
                     </div>
                     <div class="border-item-detail-product">
-                        <h2 class="product-item-box-title-2"><a href="<?php echo @$permalink; ?>"><?php echo @$title; ?></a></h2>
-                        <div class="product-detail-exerpt"><?php echo @$excerpt; ?></div>
+                        <h2 class="product-item-box-title-2"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title, 10, null ) ; ?></a></h2>
+                        <div class="product-detail-exerpt"><?php echo wp_trim_words( @$excerpt , 15,null ) ; ?></div>
                         <div class="xem-chi-tiet">
                             <a href="<?php echo @$permalink; ?>">Xem chi tiết</a>
                             <div class="dong-ho">

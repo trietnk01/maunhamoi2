@@ -865,3 +865,21 @@
 		font-family: $f_bold7;
 	}
 }
+.box-post-detail-tag{
+	margin-top: 15px;
+	.tag-toud{
+		float: left;
+		margin-left: 5px;
+		&:first-child{
+			margin-left: 0;
+		}
+		a{
+			display: block;
+			background-color: #f6f6f6;
+			color: #333;
+			border: 1px solid #ddd;
+			padding: 0px 5px;
+			border-radius: 3px;
+		}
+	}
+}
