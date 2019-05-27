@@ -238,6 +238,9 @@
 				position: absolute;
 				right:137px;
 				top: 5px;
+				@media(max-width: 576px){
+					display: none;
+				}
 			}
 		}
 		.box-product-hp-wrapper{
