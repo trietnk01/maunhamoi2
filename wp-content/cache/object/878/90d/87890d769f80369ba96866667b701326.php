@@ -1,1 +1,1 @@
-¹–ë\<?php exit; ?>a:1:{s:7:"content";s:99:"a:1:{s:33:"classic-editor/classic-editor.php";a:2:{i:0;s:14:"Classic_Editor";i:1;s:9:"uninstall";}}";}
+§šë\<?php exit; ?>a:1:{s:7:"content";s:99:"a:1:{s:33:"classic-editor/classic-editor.php";a:2:{i:0;s:14:"Classic_Editor";i:1;s:9:"uninstall";}}";}
