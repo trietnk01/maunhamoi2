@@ -24,8 +24,8 @@
                         </a>
                     </div>
                     <div class="border-item-detail-product">
-                        <h2 class="product-item-box-title-2"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title, 10, null ) ; ?></a></h2>
-                        <div class="product-detail-exerpt"><?php echo wp_trim_words( @$excerpt , 15,null ) ; ?></div>
+                        <h2 class="product-item-box-title-2"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title, 9, null ) ; ?></a></h2>
+                        <div class="product-detail-exerpt"><?php echo wp_trim_words( @$excerpt , 9,null ) ; ?></div>
                         <div class="xem-chi-tiet">
                             <a href="<?php echo @$permalink; ?>">Xem chi tiết</a>
                             <div class="dong-ho">

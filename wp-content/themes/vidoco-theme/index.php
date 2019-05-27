@@ -71,7 +71,7 @@
 										<div class="col-md-6">
 											<div class="category-frontend">
 												<div class="category-frontend-halo">
-													<div class="category-frontend-title-left"><a href="<?php echo @$term_za_category_link; ?>"><?php echo @$term_za_category_data->name; ?></a></div>
+													<div class="category-frontend-title-left"><a href="<?php echo @$term_za_category_link; ?>"><?php echo wp_trim_words( @$term_za_category_data->name, 9, null ) ; ?></a></div>
 													<div class="clr"></div>
 												</div>
 												<div>
@@ -82,7 +82,7 @@
 													</a>
 												</div>
 												<div class="duong-vien">
-													<h3 class="title-category-frontend"><a href="<?php echo @$term_za_category_link; ?>"><?php echo $term_za_category_data->description; ?></a></h3>
+													<h3 class="title-category-frontend"><a href="<?php echo @$term_za_category_link; ?>"><?php echo wp_trim_words(@$term_za_category_data->description, 9,  null ) ; ?></a></h3>
 													<div class="category-frontend-readmore">
 														<a href="<?php echo @$term_za_category_link; ?>">Xem chi tiết</a>
 														<div class="dong-ho">
