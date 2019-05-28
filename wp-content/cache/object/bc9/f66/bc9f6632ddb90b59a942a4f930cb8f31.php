@@ -1,0 +1,1 @@
+>µë\<?php exit; ?>a:1:{s:7:"content";s:62:"http://maunhamoi2.dienkim/wp-includes/images/media/default.png";}
